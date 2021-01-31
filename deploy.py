@@ -287,7 +287,7 @@ if __name__ == '__main__':
      #   exit(DROPBOX_ERROR_CODE)
     
     # Extract latest changes
-    latest_changes = get_changes(options.changelog_file)
+    latest_changes = "MyLastChange"
     if latest_changes == None:
      #   exit(CHANGES_ERROR_CODE)
     
