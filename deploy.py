@@ -258,14 +258,15 @@ if __name__ == '__main__':
     options = parser.parse_args()
 
     # Extract app version and file
-   ... 
-       app_version = json_data[0][apk_details_key]['versionName']
-    app_file = os.path.join(release_dir, json_data[0][apk_details_key]['outputFile'])
-    return app_version, app_file
-...
+ 
+   # app_version = json_data[0][apk_details_key]['versionName']
+   # app_file = os.path.join(release_dir, json_data[0][apk_details_key]['outputFile'])
+   # return app_version, app_file
 
-    app_file = (2,app/build/outputs/apk/release/apk-release.apk)
+
+    
     try:
+        app_file = (2,app/build/outputs/apk/release/apk-release.apk)
         app_version = 2
     except:
       print("An exception occurred")
