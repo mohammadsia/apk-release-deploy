@@ -143,8 +143,7 @@ def get_app(release_dir):
         json_data = json.load(app_output)
         
     print("Failed: parsing json in output file1")
-    println(json_data[0])
-    println(json_data[0])
+    print(json_data[0])
     apk_details_key = ''
     if 'apkInfo' in json_data[0]:
         apk_details_key = 'apkInfo'
@@ -259,14 +258,20 @@ if __name__ == '__main__':
     options = parser.parse_args()
 
     # Extract app version and file
-    app_file = get_app(options.release_dir)
+   ... 
+       app_version = json_data[0][apk_details_key]['versionName']
+    app_file = os.path.join(release_dir, json_data[0][apk_details_key]['outputFile'])
+    return app_version, app_file
+...
+
+    app_file = (2,app/build/outputs/apk/release/apk-release.apk)
     try:
         app_version = 2
     except:
       print("An exception occurred")
  
         
-    if app_file == None:
+    if . == None:
         exit(OUTPUT_FILE_PARSING_ERROR)
     
     target_app_file = get_target_file_name(options.app_name, app_version)
