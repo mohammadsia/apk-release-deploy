@@ -175,7 +175,7 @@ def get_target_file_name(app_name, app_version):
     app_version = app_version.replace('.', '_')
    # return '{name}_{version}.apk'.format(name=app_name, version=app_version).replace(' ','')
    
-   return 'MyApp.apk'.format("MyApp", ("2"))
+   return 'MyApp.apk'
    
 
 
