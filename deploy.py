@@ -257,8 +257,7 @@ if __name__ == '__main__':
 
     # Extract app version and file
     println(options.release_dir)
-    app_version, app_file = get_app(options.release_dir)
-    if app_version == None 
+    app_file = get_app(options.release_dir)
         app_version = 2
         
     if app_file == None:
