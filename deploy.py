@@ -284,11 +284,11 @@ if __name__ == '__main__':
     # Upload app file and get shared url
     file_url = upload_to_dropbox(target_app_file, app_file, options.dropbox_token, options.dropbox_folder)
     if file_url == None:
-     #   exit(DROPBOX_ERROR_CODE)
+        exit(DROPBOX_ERROR_CODE)
     
     # Extract latest changes
  #  latest_changes = "MyLastChange"
-    if latest_changes == None:
+   # if latest_changes == None:
      #   exit(CHANGES_ERROR_CODE)
     
     # Compose email subject and body
