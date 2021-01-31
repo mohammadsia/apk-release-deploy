@@ -287,15 +287,15 @@ if __name__ == '__main__':
      #   exit(DROPBOX_ERROR_CODE)
     
     # Extract latest changes
-    latest_changes = "MyLastChange"
+ #  latest_changes = "MyLastChange"
     if latest_changes == None:
      #   exit(CHANGES_ERROR_CODE)
     
     # Compose email subject and body
-    subject, body = get_email(options.app_name, app_version, file_url, latest_changes, options.template_file)
-    if subject == None or body == None:
+#    subject, body = get_email(options.app_name, app_version, file_url, latest_changes, options.template_file)
+ #   if subject == None or body == None:
      #  exit(TEMPLATE_ERROR_CODE)
     
     # Send email with release data
-    if not send_email(options.zapier_hook, options.email_to, subject, body):
+  #  if not send_email(options.zapier_hook, options.email_to, subject, body):
       #  exit(ZAPIER_ERROR_CODE)
