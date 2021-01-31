@@ -258,7 +258,11 @@ if __name__ == '__main__':
     # Extract app version and file
     println(options.release_dir)
     app_file = get_app(options.release_dir)
+    try:
         app_version = 2
+    except:
+      print("An exception occurred")
+ 
         
     if app_file == None:
         exit(OUTPUT_FILE_PARSING_ERROR)
