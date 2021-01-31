@@ -256,6 +256,7 @@ if __name__ == '__main__':
     options = parser.parse_args()
 
     # Extract app version and file
+    println(options.release_dir)
     app_version, app_file = get_app(options.release_dir)
     if app_version == None or app_file == None:
         exit(OUTPUT_FILE_PARSING_ERROR)
