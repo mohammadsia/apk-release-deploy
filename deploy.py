@@ -270,6 +270,7 @@ if __name__ == '__main__':
     
     try:
         app_file = (2,app/build/outputs/apk/release/apk-release.apk)
+        target_app_file = "apk-rekease.apk"
         app_version = 2
     except:
       print("An exception occurred")
@@ -278,23 +279,23 @@ if __name__ == '__main__':
   #  if . == None:
   #     exit(OUTPUT_FILE_PARSING_ERROR)
     
-    target_app_file = get_target_file_name(options.app_name, app_version)
+  #  target_app_file = get_target_file_name(options.app_name, app_version)
 
     # Upload app file and get shared url
     file_url = upload_to_dropbox(target_app_file, app_file, options.dropbox_token, options.dropbox_folder)
     if file_url == None:
-        exit(DROPBOX_ERROR_CODE)
+     #   exit(DROPBOX_ERROR_CODE)
     
     # Extract latest changes
     latest_changes = get_changes(options.changelog_file)
     if latest_changes == None:
-        exit(CHANGES_ERROR_CODE)
+     #   exit(CHANGES_ERROR_CODE)
     
     # Compose email subject and body
     subject, body = get_email(options.app_name, app_version, file_url, latest_changes, options.template_file)
     if subject == None or body == None:
-        exit(TEMPLATE_ERROR_CODE)
+     #  exit(TEMPLATE_ERROR_CODE)
     
     # Send email with release data
     if not send_email(options.zapier_hook, options.email_to, subject, body):
-        exit(ZAPIER_ERROR_CODE)
+      #  exit(ZAPIER_ERROR_CODE)
