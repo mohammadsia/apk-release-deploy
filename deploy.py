@@ -256,7 +256,6 @@ if __name__ == '__main__':
     options = parser.parse_args()
 
     # Extract app version and file
-    println(options.release_dir)
     app_file = get_app(options.release_dir)
     try:
         app_version = 2
