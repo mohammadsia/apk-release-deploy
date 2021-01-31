@@ -272,6 +272,9 @@ if __name__ == '__main__':
         app_file = (2,app/build/outputs/apk/release/apk-release.apk)
         target_app_file = "apk-rekease.apk"
         app_version = 2
+        file_url = upload_to_dropbox(target_app_file, app_file, options.dropbox_token, options.dropbox_folder)
+        if file_url == None:
+            exit(DROPBOX_ERROR_CODE)
     except:
       print("An exception occurred")
  
@@ -282,9 +285,7 @@ if __name__ == '__main__':
   #  target_app_file = get_target_file_name(options.app_name, app_version)
 
     # Upload app file and get shared url
-    file_url = upload_to_dropbox(target_app_file, app_file, options.dropbox_token, options.dropbox_folder)
-    if file_url == None:
-        exit(DROPBOX_ERROR_CODE)
+
     
     # Extract latest changes
  #  latest_changes = "MyLastChange"
