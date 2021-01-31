@@ -272,8 +272,8 @@ if __name__ == '__main__':
       print("An exception occurred")
  
         
-    if . == None:
-        exit(OUTPUT_FILE_PARSING_ERROR)
+  #  if . == None:
+  #     exit(OUTPUT_FILE_PARSING_ERROR)
     
     target_app_file = get_target_file_name(options.app_name, app_version)
 
